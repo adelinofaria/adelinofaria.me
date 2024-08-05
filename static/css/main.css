@@ -1,0 +1,84 @@
+:root {
+    --font-fallback: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --base-font: Helvetica, Arial, var(--font-fallback);
+    --base-font-size: 100%;
+
+	--background-color1: rgb(169, 247, 254);
+	--background-color2: rgb(237, 236, 16);
+	--background-color3: rgb(145, 6, 85);
+}
+
+body
+{
+	font-family: var(--base-font);
+
+	background-image: linear-gradient(30deg, var(--background-color1) 12%, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 87%, var(--background-color1) 87.5%, var(--background-color1)), linear-gradient(150deg, var(--background-color1) 12%, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 87%, var(--background-color1) 87.5%, var(--background-color1)), linear-gradient(30deg, var(--background-color1) 12%, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 87%, var(--background-color1) 87.5%, var(--background-color1)), linear-gradient(150deg, var(--background-color1) 12%, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 87%, var(--background-color1) 87.5%, var(--background-color1)), linear-gradient(60deg, var(--background-color3) 25%, rgba(0, 0, 0, 0) 25.5%, rgba(0, 0, 0, 0) 75%, var(--background-color3) 75%, var(--background-color3)), linear-gradient(60deg, var(--background-color3) 25%, rgba(0, 0, 0, 0) 25.5%, rgba(0, 0, 0, 0) 75%, var(--background-color3) 75%, var(--background-color3));
+	background-position: 0px 0px, 0px 0px, 40px 70px, 40px 70px, 0px 0px, 40px 70px;
+	background-size: 80px 140px, 80px 140px, 80px 140px, 80px 140px, 80px 140px, 80px 140px;
+	background-color: var(--background-color2);
+}
+div#background
+{
+	z-index: -1;
+}
+div#application
+{
+	z-index: 0;
+}
+div#application > div#header
+{
+	font-size: large;
+}
+div#application > div#body
+{
+	font-size: medium;
+}
+div#application > div#body > #triangle
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15vh 15vw 15vh 15vw;
+
+	width: 70vw;
+	height: 70vh;
+
+	background-color: black;
+}
+div#application > div#body > #triangle > svg
+{
+	margin-bottom: 7.72%;
+
+	width: 80%;
+	height: 80%;
+
+	transform-origin: 50% 57.72%;
+
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+div#application > div#footer
+{
+	position: absolute;
+	bottom: 0;
+}
+
+@-moz-keyframes spin {
+    100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+    100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+
+    100% {
+		-moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
