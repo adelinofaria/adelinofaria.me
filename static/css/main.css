@@ -19,7 +19,7 @@ body.rhombille
 }
 body.gif
 {
-	background-image: url('../static/img/nuke.gif');
+	background-image: url('img/nuke.gif');
 	background-size: contain;
 }
 div#application > div#header
